@@ -11,6 +11,12 @@ pageextension 50100 "Item Card Extension" extends "Item Card"
                 {
                     ApplicationArea = All;
                 }
+                part(ItemQC; "Item Quality Control Measures")
+                {
+                    CaptionML = ENU = 'Measures', ESP = 'Medidas';
+                    ApplicationArea = All;
+                    SubPageLink = "Item No." = field("No.");
+                }
             }
         }
     }

@@ -1,6 +1,7 @@
 table 50100 "Quality Control Measures"
 {
     CaptionML = ENU = 'Quality Control Measures Caption', ESP = 'Medidas control calidad';
+    LookupPageId = "Quality Control Measures";
 
     fields
     {
@@ -16,5 +17,11 @@ table 50100 "Quality Control Measures"
         {
             CaptionML = ENU = 'Blocked', ESP = 'Bloqueado';
         }
+    }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; Measure, Description, Blocked) { }
+        fieldgroup(Brick; Blocked, Measure, Description) { }
     }
 }
