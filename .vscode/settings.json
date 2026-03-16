@@ -6,4 +6,9 @@
     "CRS.ExtensionObjectNamePattern": "<BaseName>",
     "CRS.AlSubFolderName": "Source",
     "CRS.ReorganizeByNamespace": true,
+    "al.enableCodeAnalysis": true,
+    "al.codeAnalyzers": [
+        "${UICop}",
+        "${CodeCop}"
+    ]
 }
