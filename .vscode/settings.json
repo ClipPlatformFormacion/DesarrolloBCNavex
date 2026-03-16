@@ -9,6 +9,7 @@
     "al.enableCodeAnalysis": true,
     "al.codeAnalyzers": [
         "${UICop}",
-        "${CodeCop}"
+        "${CodeCop}",
+        "${PerTenantExtensionCop}"
     ]
 }
