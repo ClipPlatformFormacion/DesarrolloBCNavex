@@ -123,6 +123,54 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Extension - Field Requieres Quality Control - Property Caption</note>
           <target>Requiere control calidad</target>
         </trans-unit>
+        <trans-unit id="TableExtension 1519909599 - Field 3382814931 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Specifies the Quality control result</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Establece el resultado del control de calidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purchase Line - Field QC Result (Enum) - Property ToolTip</note>
+          <target>Establece el resultado del control de calidad</target>
+        </trans-unit>
+        <trans-unit id="TableExtension 1519909599 - Field 3382814931 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Quality Control Result (enum)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Resultado control calidad (enum)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purchase Line - Field QC Result (Enum) - Property Caption</note>
+          <target>Resultado control calidad (enum)</target>
+        </trans-unit>
+        <trans-unit id="TableExtension 1519909599 - Field 4046106435 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Specifies the Quality control result</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Establece el resultado del control de calidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purchase Line - Field QC Result (Option) - Property ToolTip</note>
+          <target>Establece el resultado del control de calidad</target>
+        </trans-unit>
+        <trans-unit id="TableExtension 1519909599 - Field 4046106435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Quality Control Result (option)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Resultado control calidad (option)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purchase Line - Field QC Result (Option) - Property Caption</note>
+          <target>Resultado control calidad (option)</target>
+        </trans-unit>
+        <trans-unit id="TableExtension 1519909599 - Field 4046106435 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source> ,Satisfactory,Non-Satisfactory</source>
+          <note from="Developer" annotates="general" priority="2">ESP=" ,Satisfactorio,No satisfactorio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purchase Line - Field QC Result (Option) - Property OptionCaption</note>
+          <target> ,Satisfactorio,No satisfactorio</target>
+        </trans-unit>
+        <trans-unit id="Enum 1586726685 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2">ESP=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Quality Control Result - EnumValue   - Property Caption</note>
+          <target> </target>
+        </trans-unit>
+        <trans-unit id="Enum 1586726685 - EnumValue 318973478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Non-Satisfactory</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No Satisfactorio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Quality Control Result - EnumValue Non-Satisfactory - Property Caption</note>
+          <target>No Satisfactorio</target>
+        </trans-unit>
+        <trans-unit id="Enum 1586726685 - EnumValue 2923686772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Satisfactory</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Satisfactorio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Quality Control Result - EnumValue Satisfactory - Property Caption</note>
+          <target>Satisfactorio</target>
+        </trans-unit>
         <trans-unit id="PermissionSet 923037325 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>SUPER Quality Control</source>
           <note from="Developer" annotates="general" priority="2">ESP="SUPER Control calidad"</note>
