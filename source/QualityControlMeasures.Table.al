@@ -1,6 +1,6 @@
 table 50100 "Quality Control Measures"
 {
-    CaptionML = ENU = 'Quality Control Measures Caption', ESP = 'Medidas control calidad';
+    Caption = 'Quality Control Measures Caption', Comment = 'ESP="Medidas control calidad"';
     LookupPageId = "Quality Control Measures";
     DataClassification = CustomerContent;
 
@@ -8,18 +8,18 @@ table 50100 "Quality Control Measures"
     {
         field(1; Measure; Code[20])
         {
-            CaptionML = ENU = 'Measure', ESP = 'Medida';
-            ToolTipML = ENU = 'sanvasjh', ESP = 'savjhsavjhsa';
+            Caption = 'Measure', Comment = 'ESP="Medida"';
+            ToolTip = 'sanvasjh', Comment = 'ESP="savjhsavjhsa"';
         }
         field(2; Description; Text[100])
         {
-            CaptionML = ENU = 'Description', ESP = 'Descripción';
-            ToolTipML = ENU = 'sanvasjh', ESP = 'savjhsavjhsa';
+            Caption = 'Description', Comment = 'ESP="Descripción"';
+            ToolTip = 'sanvasjh', Comment = 'ESP="savjhsavjhsa"';
         }
         field(3; Blocked; Boolean)
         {
-            CaptionML = ENU = 'Blocked', ESP = 'Bloqueado';
-            ToolTipML = ENU = 'sanvasjh', ESP = 'savjhsavjhsa';
+            Caption = 'Blocked', Comment = 'ESP="Bloqueado"';
+            ToolTip = 'sanvasjh', Comment = 'ESP="savjhsavjhsa"';
         }
     }
 

@@ -1,6 +1,7 @@
 page 50100 "Quality Control Measures"
 {
-    CaptionML = ENU = 'Quality Control Measures', ESP = 'Medidas control calidad';
+    //Caption = 'Quality Control Measures', Comment = 'ESP="Medidas control calidad"';
+    Caption = 'Quality Control Measures', Comment = 'ESP="Medidas control calidad",FRA="skjakjsa"';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;

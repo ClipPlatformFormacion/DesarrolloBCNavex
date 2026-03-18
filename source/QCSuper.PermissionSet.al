@@ -1,6 +1,6 @@
 permissionset 50100 "QCSuper"
 {
-    CaptionML = ENU = 'SUPER Quality Control', ESP = 'SUPER Control calidad';
+    Caption = 'SUPER Quality Control', Comment = 'ESP="SUPER Control calidad"';
     Assignable = true;
     Permissions = tabledata "Quality Control Measures" = RIMD,
         tabledata "Item Quality Control Measures" = RIMD,
