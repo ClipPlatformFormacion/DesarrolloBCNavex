@@ -1,0 +1,31 @@
+{
+    "name": "Mis normas personalizadas",
+    "description": "Personalización de los analizadores de código",
+    "rules": [
+        {
+            "id": "AS0051",
+            "action": "Hidden",
+            "justification": "De momento no vamos al AppSource"
+        },
+        {
+            "id": "AS0052",
+            "action": "Hidden",
+            "justification": "De momento no vamos al AppSource"
+        },
+        {
+            "id": "AS0092",
+            "action": "Hidden",
+            "justification": "De momento no vamos al AppSource"
+        },
+        {
+            "id": "AS0054",
+            "action": "None",
+            "justification": "No utilizamos prefijos"
+        },
+        {
+            "id": "AS0084",
+            "action": "None",
+            "justification": "Rango AppSource"
+        }
+    ]
+}
