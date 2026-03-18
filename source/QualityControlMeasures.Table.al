@@ -2,6 +2,7 @@ table 50100 "Quality Control Measures"
 {
     CaptionML = ENU = 'Quality Control Measures Caption', ESP = 'Medidas control calidad';
     LookupPageId = "Quality Control Measures";
+    DataClassification = CustomerContent;
 
     fields
     {
