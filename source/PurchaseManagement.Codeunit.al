@@ -30,4 +30,13 @@ codeunit 50100 "Purchase Management"
                 end;
             until PurchaseLine.Next() = 0;
     end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", OnPostUpdateOrderLineOnPurchHeaderReceive, '', false, false)]
+    local procedure "Purch.-Post_OnPostUpdateOrderLineOnPurchHeaderReceive"(var TempPurchLine: Record "Purchase Line"; PurchRcptHeader: Record "Purch. Rcpt. Header")
+    begin
+        TempPurchLine."QC Result (Option)" := TempPurchLine."QC Result (Option)"::" ";
+        Clear(TempPurchLine."QC Result (Enum)");
+        // TempPurchLine.Modify();
+    end;
+
 }
