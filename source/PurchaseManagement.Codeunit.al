@@ -39,4 +39,9 @@ codeunit 50100 "Purchase Management"
         // TempPurchLine.Modify();
     end;
 
+    [EventSubscriber(ObjectType::Table, Database::"Purchase Line", OnAfterValidateEvent, "No.", false, false)]
+    local procedure PurchaseLine_OnAfterValidate_No_SetQualityControlMeasures(var Rec: Record "Purchase Line")
+    begin
+
+    end;
 }

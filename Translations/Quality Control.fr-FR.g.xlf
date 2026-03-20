@@ -3,6 +3,21 @@
   <file datatype="xml" source-language="en-US" target-language="fr-FR" original="Quality Control">
     <body>
       <group id="body">
+        <trans-unit id="Table 880529302 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 2363328873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Type</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Document Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Line No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2087723315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quality Control Measures</source>
           <note from="Developer" annotates="general" priority="2">ESP="Medidas control calidad",FRA="skjakjsa"</note>

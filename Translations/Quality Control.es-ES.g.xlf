@@ -45,6 +45,69 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Item Quality Control Measures - Field Normal Value - Property Caption</note>
           <target>Valor normal</target>
         </trans-unit>
+        <trans-unit id="Table 880529302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Quality Control Measures</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Medidas calidad compra"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Property Caption</note>
+          <target>Medidas calidad compra</target>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 2363328873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Type</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Document Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 568743302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>sanvasjh</source>
+          <note from="Developer" annotates="general" priority="2">ESP="savjhsavjhsa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Item No. - Property ToolTip</note>
+          <target>savjhsavjhsa</target>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Item No. - Property Caption</note>
+          <target>Nº producto</target>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 1810825716 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>sanvasjh</source>
+          <note from="Developer" annotates="general" priority="2">ESP="savjhsavjhsa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Measure - Property ToolTip</note>
+          <target>savjhsavjhsa</target>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 1810825716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Measure</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Medida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Measure - Property Caption</note>
+          <target>Medida</target>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 2066807732 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>sanvasjh</source>
+          <note from="Developer" annotates="general" priority="2">ESP="savjhsavjhsa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Normal Value - Property ToolTip</note>
+          <target>savjhsavjhsa</target>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 2066807732 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Normal Value</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor normal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Normal Value - Property Caption</note>
+          <target>Valor normal</target>
+        </trans-unit>
+        <trans-unit id="Table 880529302 - Field 1131619133 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Value</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Purchase QC Measures - Field Value - Property Caption</note>
+          <target>Valor</target>
+        </trans-unit>
         <trans-unit id="Table 2087723315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quality Control Measures Caption</source>
           <note from="Developer" annotates="general" priority="2">ESP="Medidas control calidad"</note>
@@ -98,6 +161,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Medidas calidad producto"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Item Quality Control Measures - Property Caption</note>
           <target>Medidas calidad producto</target>
+        </trans-unit>
+        <trans-unit id="Page 880529302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Quality Control Measures</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Medidas calidad compra"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Purchase QC Measures - Property Caption</note>
+          <target>Medidas calidad compra</target>
         </trans-unit>
         <trans-unit id="Page 2087723315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quality Control Measures</source>

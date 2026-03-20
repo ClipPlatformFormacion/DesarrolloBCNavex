@@ -26,6 +26,11 @@
             "id": "AS0084",
             "action": "None",
             "justification": "Rango AppSource"
+        },
+        {
+            "id": "AA0218",
+            "action": "None",
+            "justification": "No quiero poner tooltips"
         }
     ]
 }
