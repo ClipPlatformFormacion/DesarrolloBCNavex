@@ -1,1 +1,2 @@
 Utilizar namespaces
+Limpiar el resultado del control de calidad despues de una recepción parcial
