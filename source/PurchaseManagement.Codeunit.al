@@ -16,8 +16,10 @@ codeunit 50100 "Purchase Management"
         PurchaseLine.SetRange(Type, PurchaseLine.Type::Item);
         // PurchaseLine.SetRange(Type, Enum::"Purchase Line Type"::Item);
         // PurchaseLine.SetRange(Type, "Purchase Line Type"::Item);
-        if PurchaseLine.FindSet() then
+        PurchaseLine.SetLoadFields("No.", "QC Result (Enum)", "QC Result (Option)");
+        if PurchaseLine.FindSet() then   // SELECT * FROM PurchaseLine WHERE (setrange setfilter)  // SELECT No.,QC Result, 
             repeat
+                Item.SetLoadFields("Requieres Quality Control");
                 Item.Get(PurchaseLine."No.");
                 if Item."Requieres Quality Control" then begin
                     if PurchaseLine."QC Result (Enum)" = PurchaseLine."QC Result (Enum)"::" " then
