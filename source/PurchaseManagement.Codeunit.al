@@ -14,6 +14,7 @@ codeunit 50100 "Purchase Management"
         PurchaseLine.SetRange("Document Type", PurchaseHeader."Document Type");
         PurchaseLine.SetRange("Document No.", PurchaseHeader."No.");
         PurchaseLine.SetRange(Type, PurchaseLine.Type::Item);
+        PurchaseLine.SetFilter("Qty. to Receive", '<>%1', 0);
         // PurchaseLine.SetRange(Type, Enum::"Purchase Line Type"::Item);
         // PurchaseLine.SetRange(Type, "Purchase Line Type"::Item);
         PurchaseLine.SetLoadFields("No.", "QC Result (Enum)", "QC Result (Option)");
