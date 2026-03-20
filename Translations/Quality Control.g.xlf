@@ -73,6 +73,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Medida"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Quality Control Measures - Field Measure - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3442031084 - Method 2965680387 - NamedType 4125253709" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item %1 requieres quality control</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Hay que hacer control de calidad para el producto %1"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Purchase Management - Method CheckItemQualityControl - NamedType QCMandatoryEnumErr</note>
+        </trans-unit>
         <trans-unit id="Page 3383884680 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Item Quality Control Measures</source>
           <note from="Developer" annotates="general" priority="2">ESP="Medidas calidad producto"</note>
