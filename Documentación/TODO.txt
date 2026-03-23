@@ -1,2 +1,5 @@
 Utilizar namespaces
 Generar los campos de control de calidad en el archivo de pedidos de compra
+
+EJERCICIO: Comprobar en la recepción del albarán, que las medidas específicas tengan valor
+EJERCICIO: Que las medidas tomadas en la compra, queden almacenadas en el albarán
