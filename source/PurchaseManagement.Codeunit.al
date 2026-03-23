@@ -40,8 +40,46 @@ codeunit 50100 "Purchase Management"
     end;
 
     [EventSubscriber(ObjectType::Table, Database::"Purchase Line", OnAfterValidateEvent, "No.", false, false)]
-    local procedure PurchaseLine_OnAfterValidate_No_SetQualityControlMeasures(var Rec: Record "Purchase Line")
+    local procedure PurchaseLine_OnAfterValidate_No_SetQualityControlMeasures(var Rec: Record "Purchase Line"; var xRec: Record "Purchase Line")
     begin
+        SetQualityControlMeasures(Rec, Rec."No." <> xRec."No.");
+    end;
 
+    [EventSubscriber(ObjectType::Table, Database::"Purchase Line", OnAfterInsertEvent, '', false, false)]
+    local procedure PurchaseLine_OnAfterInsert_SetQualityControlMeasures(var Rec: Record "Purchase Line")
+    begin
+        SetQualityControlMeasures(Rec, false);
+    end;
+
+    local procedure SetQualityControlMeasures(var Rec: Record "Purchase Line"; DeletePreviousMeasures: Boolean)
+    var
+        ItemQCMeasures: Record "Item Quality Control Measures";
+        PurchaseQCMeasures: Record "Purchase QC Measures";
+    begin
+        if Rec.Type <> Rec.Type::Item then
+            exit;
+
+        if Rec."Line No." = 0 then
+            exit;
+
+        if DeletePreviousMeasures then begin
+            PurchaseQCMeasures.SetRange("Document Type", Rec."Document Type");
+            PurchaseQCMeasures.SetRange("Document No.", Rec."Document No.");
+            PurchaseQCMeasures.SetRange("Line No.", Rec."Line No.");
+            PurchaseQCMeasures.DeleteAll(true);
+        end;
+
+        ItemQCMeasures.SetRange("Item No.", Rec."No.");
+        if ItemQCMeasures.FindSet() then
+            repeat
+                PurchaseQCMeasures.Init();
+                PurchaseQCMeasures.Validate("Document Type", Rec."Document Type");
+                PurchaseQCMeasures.Validate("Document No.", Rec."Document No.");
+                PurchaseQCMeasures.Validate("Line No.", Rec."Line No.");
+                PurchaseQCMeasures.Validate("Item No.", Rec."No.");
+                PurchaseQCMeasures.Validate(Measure, ItemQCMeasures.Measure);
+                PurchaseQCMeasures.Validate("Normal Value", ItemQCMeasures."Normal Value");
+                PurchaseQCMeasures.Insert(true);
+            until ItemQCMeasures.Next() = 0;
     end;
 }

@@ -2,7 +2,7 @@ pageextension 50103 "Purchase Order" extends "Purchase Order"
 {
     layout
     {
-        addbefore(PurchaseDocCheckFactbox)
+        addafter(PurchLines)
         {
             part(PurchaseQCMeasures; "Purchase QC Measures")
             {
