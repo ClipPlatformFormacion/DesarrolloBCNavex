@@ -168,6 +168,56 @@
           <note from="Developer" annotates="general" priority="2">ESP="Requiere control calidad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Extension - Field Requieres Quality Control - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 346005766 - Field 3382814931 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 346005766">
+          <source>Specifies the Quality control result</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Establece el resultado del control de calidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Journal Line - Field QC Result (Enum) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 346005766 - Field 3382814931 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 346005766">
+          <source>Quality Control Result (enum)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Resultado control calidad (enum)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Journal Line - Field QC Result (Enum) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 346005766 - Field 4046106435 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 346005766">
+          <source>Specifies the Quality control result</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Establece el resultado del control de calidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Journal Line - Field QC Result (Option) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 346005766 - Field 4046106435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 346005766">
+          <source>Quality Control Result (option)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Resultado control calidad (option)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Journal Line - Field QC Result (Option) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 346005766 - Field 4046106435 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 346005766">
+          <source> ,Satisfactory,Non-Satisfactory</source>
+          <note from="Developer" annotates="general" priority="2">ESP=" ,Satisfactorio,No satisfactorio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Journal Line - Field QC Result (Option) - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4089294192 - Field 3382814931 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4089294192">
+          <source>Specifies the Quality control result</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Establece el resultado del control de calidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Ledger Entry - Field QC Result (Enum) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4089294192 - Field 3382814931 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4089294192">
+          <source>Quality Control Result (enum)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Resultado control calidad (enum)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Ledger Entry - Field QC Result (Enum) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4089294192 - Field 4046106435 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4089294192">
+          <source>Specifies the Quality control result</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Establece el resultado del control de calidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Ledger Entry - Field QC Result (Option) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4089294192 - Field 4046106435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4089294192">
+          <source>Quality Control Result (option)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Resultado control calidad (option)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Ledger Entry - Field QC Result (Option) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4089294192 - Field 4046106435 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4089294192">
+          <source> ,Satisfactory,Non-Satisfactory</source>
+          <note from="Developer" annotates="general" priority="2">ESP=" ,Satisfactorio,No satisfactorio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Ledger Entry - Field QC Result (Option) - Property OptionCaption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 959319265 - Field 3382814931 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 959319265">
           <source>Specifies the Quality control result</source>
           <note from="Developer" annotates="general" priority="2">ESP="Establece el resultado del control de calidad"</note>
