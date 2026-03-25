@@ -99,4 +99,27 @@ codeunit 50100 "Purchase Management"
         NewItemLedgEntry."QC Result (Option)" := ItemJournalLine."QC Result (Option)";
         NewItemLedgEntry."QC Result (Enum)" := ItemJournalLine."QC Result (Enum)";
     end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", OnPostItemJnlLineOnAfterItemJnlPostLineRunWithCheck, '', false, false)]
+    local procedure "Purch.-Post_OnPostItemJnlLineOnAfterItemJnlPostLineRunWithCheck"(var ItemJnlLine: Record "Item Journal Line"; var PurchaseLine: Record "Purchase Line"; var PurchaseHeader: Record "Purchase Header"; QtyToBeReceived: Decimal; WhseReceive: Boolean; var TempWhseRcptHeader: Record "Warehouse Receipt Header" temporary; QtyToBeReceivedBase: Decimal)
+    var
+        QCItemJnlLine: Record "Item Journal Line";
+        ItemJnlPostLine: Codeunit "Item Jnl.-Post Line";
+        UnknownQCResultErr: Label 'Quality Control Result %1 unknown', Comment = 'ESP="Resultado control de calidad %1 desconocido"';
+    begin
+        case PurchaseLine."QC Result (Enum)" of
+            PurchaseLine."QC Result (Enum)"::" ", PurchaseLine."QC Result (Enum)"::Satisfactory:
+                ;  // Do nothing
+            PurchaseLine."QC Result (Enum)"::"Non-Satisfactory":
+                begin
+                    QCItemJnlLine := ItemJnlLine;
+                    QCItemJnlLine."Entry Type" := QCItemJnlLine."Entry Type"::"Negative Adjmt.";
+                    QCItemJnlLine."Item Shpt. Entry No." := 0;
+                    QCItemJnlLine."Applies-to Entry" := ItemJnlLine."Item Shpt. Entry No.";
+                    ItemJnlPostLine.RunWithCheck(QCItemJnlLine);
+                end;
+            else
+                Error(UnknownQCResultErr, PurchaseLine."QC Result (Enum)");
+        end;
+    end;
 }

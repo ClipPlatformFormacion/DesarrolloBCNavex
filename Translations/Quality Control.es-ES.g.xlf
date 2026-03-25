@@ -156,6 +156,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Purchase Management - Method CheckItemQualityControl - NamedType QCMandatoryEnumErr</note>
           <target>Hay que hacer control de calidad para el producto %1</target>
         </trans-unit>
+        <trans-unit id="Codeunit 3442031084 - Method 473381155 - NamedType 2597132754" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quality Control Result %1 unknown</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Resultado control de calidad %1 desconocido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Purchase Management - Method Purch.-Post_OnPostItemJnlLineOnAfterItemJnlPostLineRunWithCheck - NamedType UnknownQCResultErr</note>
+          <target>Resultado control de calidad %1 desconocido</target>
+        </trans-unit>
         <trans-unit id="Page 3383884680 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Item Quality Control Measures</source>
           <note from="Developer" annotates="general" priority="2">ESP="Medidas calidad producto"</note>
