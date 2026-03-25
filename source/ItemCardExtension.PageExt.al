@@ -11,6 +11,10 @@ pageextension 50100 "Item Card Extension" extends "Item Card"
                 {
                     ApplicationArea = All;
                 }
+                field("Non-Satisfactory Purch. (Qty.)"; Rec."Non-Satisfactory Purch. (Qty.)")
+                {
+                    ApplicationArea = All;
+                }
                 part(ItemQC; "Item Quality Control Measures")
                 {
                     Caption = 'Measures', Comment = 'ESP="Medidas"';
