@@ -3,6 +3,11 @@
   <file datatype="xml" source-language="en-US" target-language="fr-FR" original="Quality Control">
     <body>
       <group id="body">
+        <trans-unit id="Table 3383884680 - Field 2582295394 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Measure Description</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Item Quality Control Measures - Field Measure Description - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 880529302 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document No.</source>
           <note from="Developer" annotates="general" priority="2"/>
@@ -33,6 +38,11 @@
           <source>Un FlowFilter</source>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Extension - Field Un FlowFilter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4089294192 - Field 3119688693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4089294192">
+          <source>Vendor Name</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Ledger Entry - Field Vendor Name - Property Caption</note>
         </trans-unit>
       </group>
     </body>

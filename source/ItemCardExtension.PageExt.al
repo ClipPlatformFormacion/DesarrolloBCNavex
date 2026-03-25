@@ -11,10 +11,10 @@ pageextension 50100 "Item Card Extension" extends "Item Card"
                 {
                     ApplicationArea = All;
                 }
-                field("Non-Satisfactory Purch. (Qty.)"; Rec."Non-Satisfactory Purch. (Qty.)")
-                {
-                    ApplicationArea = All;
-                }
+                // field("Non-Satisfactory Purch. (Qty.)"; Rec."Non-Satisfactory Purch. (Qty.)")
+                // {
+                //     ApplicationArea = All;
+                // }
                 part(ItemQC; "Item Quality Control Measures")
                 {
                     Caption = 'Measures', Comment = 'ESP="Medidas"';
@@ -24,4 +24,11 @@ pageextension 50100 "Item Card Extension" extends "Item Card"
             }
         }
     }
+
+
+    trigger OnAfterGetRecord()
+    begin
+        Rec.CalcFields("Non-Satisfactory Purch. (Qty.)");
+        Message('Este producto tiene %1 cantidades compradas no satisfactorias', Rec."Non-Satisfactory Purch. (Qty.)");
+    end;
 }

@@ -23,6 +23,11 @@ table 50101 "Item Quality Control Measures"
             Caption = 'Normal Value', Comment = 'ESP="Valor normal"';
             ToolTip = 'sanvasjh', Comment = 'ESP="savjhsavjhsa"';
         }
+        field(4; "Measure Description"; Text[100])
+        {
+            FieldClass = FlowField;
+            CalcFormula = lookup("Quality Control Measures".Description where(Measure = field(Measure)));
+        }
     }
 
     keys

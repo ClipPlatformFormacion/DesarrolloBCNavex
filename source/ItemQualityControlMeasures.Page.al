@@ -18,6 +18,7 @@ page 50101 "Item Quality Control Measures"
                 }
                 field(Measure; Rec.Measure) { }
                 field("Normal Value"; Rec."Normal Value") { }
+                field("Measure Description"; Rec."Measure Description") { }
             }
         }
     }

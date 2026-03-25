@@ -28,6 +28,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Medida"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Item Quality Control Measures - Field Measure - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3383884680 - Field 2582295394 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Measure Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Item Quality Control Measures - Field Measure Description - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3383884680 - Field 2066807732 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>sanvasjh</source>
           <note from="Developer" annotates="general" priority="2">ESP="savjhsavjhsa"</note>
@@ -232,6 +237,11 @@
           <source> ,Satisfactory,Non-Satisfactory</source>
           <note from="Developer" annotates="general" priority="2">ESP=" ,Satisfactorio,No satisfactorio"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Ledger Entry - Field QC Result (Option) - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4089294192 - Field 3119688693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4089294192">
+          <source>Vendor Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Ledger Entry - Field Vendor Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 959319265 - Field 3382814931 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 959319265">
           <source>Specifies the Quality control result</source>

@@ -17,5 +17,10 @@ tableextension 50103 "Item Ledger Entry" extends "Item Ledger Entry"
             ToolTip = 'Specifies the Quality control result', comment = 'ESP="Establece el resultado del control de calidad"';
             DataClassification = CustomerContent;
         }
+        field(50102; "Vendor Name"; Text[100])
+        {
+            FieldClass = FlowField;
+            CalcFormula = lookup(Vendor.Name where("No." = field("Source No.")));
+        }
     }
 }
