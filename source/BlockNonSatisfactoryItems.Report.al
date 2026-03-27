@@ -3,13 +3,20 @@ report 50100 "Block Non-Satisfactory Items"
     Caption = 'Block Non-Satisfactory Items', comment = 'ESP="Bloquear productos No satisfactorios"';
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
-    ProcessingOnly = true;
+    // ProcessingOnly = true;
+    DefaultRenderingLayout = RDLCLayout;
 
     dataset
     {
         dataitem(Item; Item)
         {
             RequestFilterFields = "No.", "Inventory Posting Group";
+
+            column(No; "No.") { }
+            column(Description; Description) { }
+            column(NonSatisfactoryPurchQty; "Non-Satisfactory Purch. (Qty.)") { }
+            column(BlockedByReport; BlockedByReport) { }
+
             trigger OnPreDataItem()
             begin
                 // Message('OnPreDataItem');
@@ -21,12 +28,14 @@ report 50100 "Block Non-Satisfactory Items"
                 // Message('OnAfterGetRecord');
                 // Counter := Counter + 1;
                 Counter += 1;
+                Clear(BlockedByReport);
 
                 Item.CalcFields("Non-Satisfactory Purch. (Qty.)");
                 if Item."Non-Satisfactory Purch. (Qty.)" > NoOfNonSatistactoryUnits then begin
                     Item.Validate(Blocked, true);
                     Item.Modify(true);
                     ModifiedCounter += 1;
+                    BlockedByReport := true;
                 end;
             end;
 
@@ -69,6 +78,15 @@ report 50100 "Block Non-Satisfactory Items"
         end;
     }
 
+    rendering
+    {
+        layout(RDLCLayout)
+        {
+            Type = RDLC;
+            LayoutFile = 'BlockNonSatisfactoryItems.rdl';
+        }
+    }
+
     trigger OnPreReport()
     begin
         if NoOfNonSatistactoryUnits = 0 then
@@ -80,4 +98,5 @@ report 50100 "Block Non-Satisfactory Items"
         Period: DateFormula;
         Counter, ModifiedCounter : Integer;
         NoOfNonSatistactoryUnits: Decimal;
+        BlockedByReport: Boolean;
 }
