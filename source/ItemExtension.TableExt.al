@@ -18,7 +18,8 @@ tableextension 50100 "Item Extension" extends Item
                                 "Item No." = field("No."),
                                 "QC Result (Enum)" = const("Non-Satisfactory"),
                                 "Entry Type" = const(Purchase),
-                                "Location Code" = field("Un FlowFilter")
+                                "Location Code" = field("Un FlowFilter"),
+                                "Posting Date" = field("Date Filter")
                                 ));
         }
         field(50102; "Un FlowFilter"; Code[20])
