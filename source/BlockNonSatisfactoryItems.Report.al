@@ -95,6 +95,11 @@ report 50100 "Block Non-Satisfactory Items"
             Type = RDLC;
             LayoutFile = './source/BlockNonSatisfactoryItems.rdl';
         }
+        layout(ExcelLayout)
+        {
+            Type = Excel;
+            LayoutFile = './source/BlockNonSatisfactoryItems.xlsx';
+        }
     }
 
     trigger OnPreReport()
