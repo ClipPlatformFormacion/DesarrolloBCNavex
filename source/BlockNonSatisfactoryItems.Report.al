@@ -83,7 +83,7 @@ report 50100 "Block Non-Satisfactory Items"
         layout(RDLCLayout)
         {
             Type = RDLC;
-            LayoutFile = 'BlockNonSatisfactoryItems.rdl';
+            LayoutFile = '/source/BlockNonSatisfactoryItems.rdl';
         }
     }
 
