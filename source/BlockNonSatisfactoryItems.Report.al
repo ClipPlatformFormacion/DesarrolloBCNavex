@@ -100,6 +100,11 @@ report 50100 "Block Non-Satisfactory Items"
             Type = Excel;
             LayoutFile = './source/BlockNonSatisfactoryItems.xlsx';
         }
+        layout(WordLayout)
+        {
+            Type = Word;
+            LayoutFile = './source/BlockNonSatisfactoryItems.docx';
+        }
     }
 
     trigger OnPreReport()
