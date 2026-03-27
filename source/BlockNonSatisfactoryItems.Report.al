@@ -12,10 +12,20 @@ report 50100 "Block Non-Satisfactory Items"
         {
             RequestFilterFields = "No.", "Inventory Posting Group";
 
-            column(No; "No.") { }
-            column(Description; Description) { }
-            column(NonSatisfactoryPurchQty; "Non-Satisfactory Purch. (Qty.)") { }
-            column(BlockedByReport; BlockedByReport) { }
+            column(No; "No.")
+            {
+                IncludeCaption = true;
+            }
+            column(Description; Description)
+            {
+                IncludeCaption = true;
+            }
+            column(NonSatisfactoryPurchQty; "Non-Satisfactory Purch. (Qty.)")
+            {
+                IncludeCaption = true;
+            }
+            column(BlockedByReport; Format(BlockedByReport)) { }
+            column(BlockedByReportCaption; BlockedByReportCaption) { }
 
             trigger OnPreDataItem()
             begin
@@ -83,7 +93,7 @@ report 50100 "Block Non-Satisfactory Items"
         layout(RDLCLayout)
         {
             Type = RDLC;
-            LayoutFile = '/source/BlockNonSatisfactoryItems.rdl';
+            LayoutFile = './source/BlockNonSatisfactoryItems.rdl';
         }
     }
 
@@ -99,4 +109,5 @@ report 50100 "Block Non-Satisfactory Items"
         Counter, ModifiedCounter : Integer;
         NoOfNonSatistactoryUnits: Decimal;
         BlockedByReport: Boolean;
+        BlockedByReportCaption: TextConst ENU = 'Blocked by Report', ESP = 'Bloqueado por el informe';
 }
