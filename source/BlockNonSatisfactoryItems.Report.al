@@ -12,6 +12,16 @@ report 50100 "Block Non-Satisfactory Items"
         {
             RequestFilterFields = "No.", "Inventory Posting Group";
 
+            dataitem(ItemQualityControlMeasures; "Item Quality Control Measures")
+            {
+                DataItemLinkReference = Item;
+                DataItemLink = "Item No." = field("No.");
+
+                column(Measure; Measure) { }
+                column(Normal_Value; "Normal Value") { }
+                column(Measure_Description; "Measure Description") { }
+            }
+
             column(No; "No.")
             {
                 IncludeCaption = true;

@@ -461,6 +461,15 @@ End Function
         <Field Name="BlockedByReportCaption">
           <DataField>BlockedByReportCaption</DataField>
         </Field>
+        <Field Name="Measure">
+          <DataField>Measure</DataField>
+        </Field>
+        <Field Name="Normal_Value">
+          <DataField>Normal_Value</DataField>
+        </Field>
+        <Field Name="Measure_Description">
+          <DataField>Measure_Description</DataField>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>DataSource</DataSourceName>
