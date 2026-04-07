@@ -1,3 +1,7 @@
+namespace Navex.Items;
+
+using Microsoft.Inventory.Item;
+
 pageextension 50100 "Item Card Extension" extends "Item Card"
 {
     layout

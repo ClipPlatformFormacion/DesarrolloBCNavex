@@ -1,3 +1,6 @@
+namespace ClipPlatform.Setup;
+
+using ClipPlatform.Sales;
 permissionset 50100 "QCSuper"
 {
     Caption = 'SUPER Quality Control', Comment = 'ESP="SUPER Control calidad"';
@@ -10,5 +13,9 @@ permissionset 50100 "QCSuper"
         page "Quality Control Measures" = X,
         tabledata "Purchase QC Measures" = RIMD,
         table "Purchase QC Measures" = X,
-        codeunit "Purchase Management" = X;
+        codeunit "Purchase Management" = X,
+        tabledata Customer = RIMD,
+        table Customer = X,
+        report "Block Non-Satisfactory Items" = X,
+        page "Purchase QC Measures" = X;
 }

@@ -1,3 +1,9 @@
+namespace Navex.Items;
+
+using Microsoft.Inventory.Item;
+using Microsoft.Inventory.Ledger;
+using Microsoft.Inventory.Location;
+
 tableextension 50100 "Item Extension" extends Item
 {
     fields
