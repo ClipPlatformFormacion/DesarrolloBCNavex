@@ -3,6 +3,12 @@
   <file datatype="xml" source-language="en-US" target-language="es-ES" original="Quality Control">
     <body>
       <group id="body">
+        <trans-unit id="XmlPort 2247314521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import/Export QC Measures</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importar/exportar medidas CC"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort Import/Export QC Measures - Property Caption</note>
+          <target>Importar/exportar medidas CC</target>
+        </trans-unit>
         <trans-unit id="Table 1994964448 - Field 4093990710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Language</source>
           <note from="Developer" annotates="general" priority="2"/>
@@ -239,6 +245,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Medidas control calidad",FRA="skjakjsa"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Quality Control Measures - Property Caption</note>
           <target>Medidas control calidad</target>
+        </trans-unit>
+        <trans-unit id="Page 2087723315 - Action 4154342588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import/Export</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importar/Exportar"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Quality Control Measures - Action ImportExportQCMeasures - Property Caption</note>
+          <target>Importar/Exportar</target>
         </trans-unit>
         <trans-unit id="Report 4215254711 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Block Non-Satisfactory Items</source>

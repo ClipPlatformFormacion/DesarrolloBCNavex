@@ -19,4 +19,17 @@ page 50100 "Quality Control Measures"
             }
         }
     }
+
+    actions
+    {
+        area(Processing)
+        {
+            action(ImportExportQCMeasures)
+            {
+                Caption = 'Import/Export', comment = 'ESP="Importar/Exportar"';
+                Image = Import;
+                RunObject = xmlport "Import/Export QC Measures";
+            }
+        }
+    }
 }
