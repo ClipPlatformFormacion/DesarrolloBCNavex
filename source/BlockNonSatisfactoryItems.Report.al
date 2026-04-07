@@ -35,7 +35,7 @@ report 50100 "Block Non-Satisfactory Items"
                 IncludeCaption = true;
             }
             column(BlockedByReport; Format(BlockedByReport)) { }
-            column(BlockedByReportCaption; BlockedByReportCaption) { }
+            column(BlockedByReportCaption; BlockedByReportCaptionLbl) { }
 
             trigger OnPreDataItem()
             begin
@@ -129,5 +129,5 @@ report 50100 "Block Non-Satisfactory Items"
         Counter, ModifiedCounter : Integer;
         NoOfNonSatistactoryUnits: Decimal;
         BlockedByReport: Boolean;
-        BlockedByReportCaption: TextConst ENU = 'Blocked by Report', ESP = 'Bloqueado por el informe';
+        BlockedByReportCaptionLbl: Label 'Blocked by Report', Comment = 'ESP="Bloqueado por el informe"';
 }

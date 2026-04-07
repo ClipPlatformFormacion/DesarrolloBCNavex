@@ -20,10 +20,12 @@ pageextension 50104 "Item Ledger Entries" extends "Item Ledger Entries"
             {
                 ApplicationArea = All;
             }
+#pragma warning disable AA0225
             field(VendorName2; UnaLlamadaAUnaFuncion(Rec."Source No."))
             {
                 ApplicationArea = All;
             }
+#pragma warning restore
         }
     }
 

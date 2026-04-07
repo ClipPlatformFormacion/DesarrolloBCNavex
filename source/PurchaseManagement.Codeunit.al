@@ -5,7 +5,9 @@ codeunit 50100 "Purchase Management"
     var
         PurchaseLine: Record "Purchase Line";
         Item: Record Item;
+#pragma warning disable AL0424
         QCMandatoryOptionErr: TextConst ENU = 'Item %1 requieres quality control', ESP = 'Hay que hacer control de calidad para el producto %1';
+#pragma warning restore
         QCMandatoryEnumErr: Label 'Item %1 requieres quality control', Comment = 'ESP="Hay que hacer control de calidad para el producto %1"';
     begin
         if not PurchaseHeader.Receive then

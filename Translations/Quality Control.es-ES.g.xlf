@@ -191,6 +191,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report Block Non-Satisfactory Items - Property Caption</note>
           <target>Bloquear productos No satisfactorios</target>
         </trans-unit>
+        <trans-unit id="Report 4215254711 - NamedType 1858199587" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blocked by Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Bloqueado por el informe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Block Non-Satisfactory Items - NamedType BlockedByReportCaptionLbl</note>
+          <target>Bloqueado por el informe</target>
+        </trans-unit>
         <trans-unit id="Report 4215254711 - ReportDataItem 3276313895 - Method 3715240 - NamedType 2967066577" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 items have been blocked out of a total of %2 items</source>
           <note from="Developer" annotates="general" priority="2">ESP="Se han bloqueado %1 productos de un total de %2 productos"</note>
