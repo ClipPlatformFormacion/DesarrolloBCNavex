@@ -30,6 +30,12 @@ page 50100 "Quality Control Measures"
                 Image = Import;
                 RunObject = xmlport "Import/Export QC Measures";
             }
+            action(ExecuteQuery)
+            {
+                Caption = 'Execute Query', comment = 'ESP="Ejecutar query"';
+                Image = ExecuteBatch;
+                RunObject = query "Item Vendor";
+            }
         }
     }
 }

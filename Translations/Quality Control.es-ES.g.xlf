@@ -246,6 +246,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Quality Control Measures - Property Caption</note>
           <target>Medidas control calidad</target>
         </trans-unit>
+        <trans-unit id="Page 2087723315 - Action 1916069359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Execute Query</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ejecutar query"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Quality Control Measures - Action ExecuteQuery - Property Caption</note>
+          <target>Ejecutar query</target>
+        </trans-unit>
         <trans-unit id="Page 2087723315 - Action 4154342588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Import/Export</source>
           <note from="Developer" annotates="general" priority="2">ESP="Importar/Exportar"</note>
