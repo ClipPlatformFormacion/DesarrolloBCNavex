@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "MainApp",
+			"path": "MainApp"
+		},
+		{
+			"name": "SecondaryApp",
+			"path": "SecondaryApp"
+		}
+	],
+	"settings": {}
+}
