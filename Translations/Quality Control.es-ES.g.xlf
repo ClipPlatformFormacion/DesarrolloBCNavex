@@ -222,6 +222,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Purchase Management - Method CheckItemQualityControl - NamedType QCMandatoryEnumErr</note>
           <target>Hay que hacer control de calidad para el producto %1</target>
         </trans-unit>
+        <trans-unit id="Codeunit 3442031084 - Method 2965680387 - NamedType 3555955336" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All quality measure values have to be filled for item %1</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Todas las medidas de control de calidad deben tener un valor para el producto %1"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Purchase Management - Method CheckItemQualityControl - NamedType QCValueErr</note>
+          <target>Todas las medidas de control de calidad deben tener un valor para el producto %1</target>
+        </trans-unit>
         <trans-unit id="Codeunit 3442031084 - Method 473381155 - NamedType 2597132754" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quality Control Result %1 unknown</source>
           <note from="Developer" annotates="general" priority="2">ESP="Resultado control de calidad %1 desconocido"</note>

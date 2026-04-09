@@ -5,10 +5,12 @@ codeunit 50100 "Purchase Management"
     var
         PurchaseLine: Record "Purchase Line";
         Item: Record Item;
+        PurchaseQCMeasures: Record "Purchase QC Measures";
 #pragma warning disable AL0424
         QCMandatoryOptionErr: TextConst ENU = 'Item %1 requieres quality control', ESP = 'Hay que hacer control de calidad para el producto %1';
 #pragma warning restore
         QCMandatoryEnumErr: Label 'Item %1 requieres quality control', Comment = 'ESP="Hay que hacer control de calidad para el producto %1"';
+        QCValueErr: Label 'All quality measure values have to be filled for item %1', Comment = 'ESP="Todas las medidas de control de calidad deben tener un valor para el producto %1"';
     begin
         if not PurchaseHeader.Receive then
             exit;
@@ -29,16 +31,34 @@ codeunit 50100 "Purchase Management"
                         Error(QCMandatoryEnumErr, PurchaseLine."No.");
                     if PurchaseLine."QC Result (Option)" = PurchaseLine."QC Result (Option)"::" " then
                         Error(QCMandatoryOptionErr, PurchaseLine."No.");
+
+                    PurchaseQCMeasures.SetRange("Document Type", PurchaseLine."Document Type");
+                    PurchaseQCMeasures.SetRange("Document No.", PurchaseLine."Document No.");
+                    PurchaseQCMeasures.SetRange("Line No.", PurchaseLine."Line No.");
+                    PurchaseQCMeasures.SetFilter(Value, '%1', '');
+                    if not PurchaseQCMeasures.IsEmpty() then
+                        Error(QCValueErr, PurchaseLine."No.");
                 end;
             until PurchaseLine.Next() = 0;
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", OnPostUpdateOrderLineOnPurchHeaderReceive, '', false, false)]
     local procedure "Purch.-Post_OnPostUpdateOrderLineOnPurchHeaderReceive"(var TempPurchLine: Record "Purchase Line"; PurchRcptHeader: Record "Purch. Rcpt. Header")
+    var
+        PurchaseQCMeasures: Record "Purchase QC Measures";
     begin
         TempPurchLine."QC Result (Option)" := TempPurchLine."QC Result (Option)"::" ";
         Clear(TempPurchLine."QC Result (Enum)");
         // TempPurchLine.Modify();
+
+        PurchaseQCMeasures.SetRange("Document Type", TempPurchLine."Document Type");
+        PurchaseQCMeasures.SetRange("Document No.", TempPurchLine."Document No.");
+        PurchaseQCMeasures.SetRange("Line No.", TempPurchLine."Line No.");
+        if PurchaseQCMeasures.FindSet() then
+            repeat
+                Clear(PurchaseQCMeasures.Value);
+                PurchaseQCMeasures.Modify();
+            until PurchaseQCMeasures.Next() = 0;
     end;
 
     [EventSubscriber(ObjectType::Table, Database::"Purchase Line", OnAfterValidateEvent, "No.", false, false)]
@@ -86,6 +106,25 @@ codeunit 50100 "Purchase Management"
                 PurchaseQCMeasures.Validate("Normal Value", ItemQCMeasures."Normal Value");
                 PurchaseQCMeasures.Insert(true);
             until ItemQCMeasures.Next() = 0;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", OnAfterPurchRcptLineInsert, '', false, false)]
+    local procedure "Purch.-Post_OnAfterPurchRcptLineInsert"(PurchaseLine: Record "Purchase Line"; var PurchRcptLine: Record "Purch. Rcpt. Line"; ItemLedgShptEntryNo: Integer; WhseShip: Boolean; WhseReceive: Boolean; CommitIsSupressed: Boolean; PurchInvHeader: Record "Purch. Inv. Header"; var TempTrackingSpecification: Record "Tracking Specification" temporary; PurchRcptHeader: Record "Purch. Rcpt. Header"; TempWhseRcptHeader: Record "Warehouse Receipt Header"; xPurchLine: Record "Purchase Line"; var TempPurchLineGlobal: Record "Purchase Line" temporary)
+    var
+        PurchaseQCMeasures: Record "Purchase QC Measures";
+        NewPurchaseQCMeasures: Record "Purchase QC Measures";
+    begin
+        PurchaseQCMeasures.SetRange("Document Type", PurchaseLine."Document Type");
+        PurchaseQCMeasures.SetRange("Document No.", PurchaseLine."Document No.");
+        PurchaseQCMeasures.SetRange("Line No.", PurchaseLine."Line No.");
+        if PurchaseQCMeasures.FindSet() then
+            repeat
+                NewPurchaseQCMeasures := PurchaseQCMeasures;
+                NewPurchaseQCMeasures."Document Type" := NewPurchaseQCMeasures."Document Type"::"Posted Receipt";
+                NewPurchaseQCMeasures."Document No." := PurchRcptLine."Document No.";
+                NewPurchaseQCMeasures."Line No." := PurchRcptLine."Line No.";
+                NewPurchaseQCMeasures.Insert();
+            until PurchaseQCMeasures.Next() = 0;
     end;
 
     [EventSubscriber(ObjectType::Table, Database::"Item Journal Line", OnAfterCopyItemJnlLineFromPurchLine, '', false, false)]
