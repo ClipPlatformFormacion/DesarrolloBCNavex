@@ -6,9 +6,8 @@ tableextension 50105 Customer extends Customer
 {
     fields
     {
-        field(50100; "Level"; Option)
+        field(50100; "Level"; Enum "Customer Level")
         {
-            OptionMembers = " ",Bronze,Silver;
             DataClassification = CustomerContent;
 
             trigger OnValidate()
