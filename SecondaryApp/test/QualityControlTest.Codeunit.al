@@ -2,6 +2,7 @@ namespace ClipPlatform.Test;
 
 using Microsoft.Inventory.Item;
 using Microsoft.Purchases.Document;
+using System.TestLibraries.Utilities;
 
 codeunit 50151 "Quality Control Test"
 {
@@ -24,6 +25,7 @@ codeunit 50151 "Quality Control Test"
     procedure GetMin001()
     var
         GetMin: Codeunit GetMin;
+        LibraryAssert: Codeunit "Library Assert";
         Valor1: Decimal;
         Valor2: Decimal;
         Resultado: Decimal;
@@ -37,15 +39,15 @@ codeunit 50151 "Quality Control Test"
         // [When] Se llama a la función GetMin
         Resultado := GetMin.GetMin(Valor1, Valor2);
 
-        // [Then] El resultado es 1
-        if Resultado <> Valor1 then
-            Error('El resultado es incorrecto');
+        // [Then] El resultado es 1        
+        LibraryAssert.AreEqual(Valor1, Resultado, 'El resultado es incorrecto');
     end;
 
     [Test]
     procedure GetMin002()
     var
         GetMin: Codeunit GetMin;
+        LibraryAssert: Codeunit "Library Assert";
         Valor1: Decimal;
         Valor2: Decimal;
         Resultado: Decimal;
@@ -60,8 +62,7 @@ codeunit 50151 "Quality Control Test"
         Resultado := GetMin.GetMin(Valor1, Valor2);
 
         // [Then] El resultado es 2
-        if Resultado <> Valor2 then
-            Error('El resultado es incorrecto');
+        LibraryAssert.AreEqual(Valor2, Resultado, 'El resultado es incorrecto');
     end;
 
     [Test]
@@ -73,6 +74,7 @@ codeunit 50151 "Quality Control Test"
         ItemQCMeasures: Record "Item Quality Control Measures";
         LibraryQC: Codeunit "Library - QC";
         LibraryPurchase: Codeunit "Library - Purchase";
+        LibraryAssert: Codeunit "Library Assert";
         ItemNo: Code[20];
     begin
         // [Scenario] Cuando se selecciona un producto que requiere control de calidad
@@ -94,13 +96,11 @@ codeunit 50151 "Quality Control Test"
         PurchaseQCMeasures.SetRange("Document Type", PurchaseHeader."Document Type");
         PurchaseQCMeasures.SetRange("Document No.", PurchaseHeader."No.");
         PurchaseQCMeasures.SetRange("Line No.", PurchaseLine."Line No.");
-        if PurchaseQCMeasures.Count() <> 2 then
-            Error('El número de medidas de control de calidad vinculadas al pedido de compra es incorrecto');
+        LibraryAssert.AreEqual(2, PurchaseQCMeasures.Count(), 'El número de medidas de control de calidad vinculadas al pedido de compra es incorrecto');
 
         if PurchaseQCMeasures.FindSet() then
             repeat
-                if not ItemQCMeasures.Get(ItemNo, PurchaseQCMeasures.Measure) then
-                    Error('La medida vinculada a la compra no existe en el producto');
+                LibraryAssert.IsTrue(ItemQCMeasures.Get(ItemNo, PurchaseQCMeasures.Measure), 'La medida vinculada a la compra no existe en el producto');
             until PurchaseQCMeasures.Next() = 0;
     end;
 }
