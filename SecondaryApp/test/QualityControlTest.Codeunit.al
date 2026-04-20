@@ -1,5 +1,7 @@
 namespace ClipPlatform.Test;
 
+using ClipPlatform.GetMin;
+using ClipPlatform.QualityControl;
 using Microsoft.Inventory.Item;
 using Microsoft.Purchases.Document;
 using System.TestLibraries.Utilities;

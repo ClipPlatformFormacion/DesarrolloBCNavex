@@ -1,3 +1,6 @@
+namespace ClipPlatform.QualityControl;
+
+using Microsoft.Inventory.Item;
 codeunit 50153 "Library - QC"
 {
     procedure CreateItemWithQC(): Code[20]

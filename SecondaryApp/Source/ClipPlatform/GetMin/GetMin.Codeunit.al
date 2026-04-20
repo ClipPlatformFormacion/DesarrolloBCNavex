@@ -1,3 +1,5 @@
+namespace ClipPlatform.GetMin;
+
 codeunit 50152 GetMin
 {
     procedure GetMin(Parametro1: Decimal; Parametro2: Decimal): Decimal
