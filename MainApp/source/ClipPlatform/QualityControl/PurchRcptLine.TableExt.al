@@ -1,4 +1,8 @@
-tableextension 50101 "Purchase Line" extends "Purchase Line"
+namespace ClipPlatform.QualityControl;
+
+using Microsoft.Purchases.History;
+
+tableextension 50102 "Purch. Rcpt. Line" extends "Purch. Rcpt. Line"
 {
     fields
     {

@@ -1,3 +1,7 @@
+namespace ClipPlatform.QualityControl;
+
+using Microsoft.Purchases.Document;
+
 pageextension 50103 "Purchase Order" extends "Purchase Order"
 {
     layout

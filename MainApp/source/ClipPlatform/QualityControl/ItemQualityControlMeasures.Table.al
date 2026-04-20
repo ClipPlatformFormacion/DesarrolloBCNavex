@@ -1,13 +1,14 @@
-table 50102 "Purchase QC Measures"
+namespace ClipPlatform.QualityControl;
+
+using Microsoft.Inventory.Item;
+
+table 50101 "Item Quality Control Measures"
 {
-    Caption = 'Purchase Quality Control Measures', Comment = 'ESP="Medidas calidad compra"';
+    Caption = 'Item Quality Control Measures', Comment = 'ESP="Medidas calidad producto"';
     DataClassification = CustomerContent;
 
     fields
     {
-        field(10; "Document Type"; Enum "Purchase Document Type From") { }
-        field(11; "Document No."; Code[20]) { }
-        field(12; "Line No."; Integer) { }
         field(1; "Item No."; Code[20])
         {
             Caption = 'Item No.', Comment = 'ESP="Nº producto"';
@@ -26,15 +27,16 @@ table 50102 "Purchase QC Measures"
             Caption = 'Normal Value', Comment = 'ESP="Valor normal"';
             ToolTip = 'sanvasjh', Comment = 'ESP="savjhsavjhsa"';
         }
-        field(4; "Value"; Text[50])
+        field(4; "Measure Description"; Text[100])
         {
-            Caption = 'Value', comment = 'ESP="Valor"';
+            FieldClass = FlowField;
+            CalcFormula = lookup("Quality Control Measures".Description where(Measure = field(Measure)));
         }
     }
 
     keys
     {
-        key(PK; "Document Type", "Document No.", "Line No.", Measure)
+        key(PK; "Item No.", Measure)
         {
             Clustered = true;
         }

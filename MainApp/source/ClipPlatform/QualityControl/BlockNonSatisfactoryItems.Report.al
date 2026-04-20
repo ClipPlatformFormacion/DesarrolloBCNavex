@@ -1,3 +1,6 @@
+namespace ClipPlatform.QualityControl;
+
+using Microsoft.Inventory.Item;
 report 50100 "Block Non-Satisfactory Items"
 {
     Caption = 'Block Non-Satisfactory Items', comment = 'ESP="Bloquear productos No satisfactorios"';

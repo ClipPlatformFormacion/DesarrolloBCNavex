@@ -1,5 +1,6 @@
 namespace Navex.Items;
 
+using ClipPlatform.QualityControl;
 using Microsoft.Inventory.Item;
 
 pageextension 50100 "Item Card Extension" extends "Item Card"

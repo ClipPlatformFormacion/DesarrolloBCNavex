@@ -1,3 +1,7 @@
+namespace ClipPlatform.QualityControl;
+
+using Microsoft.Inventory.Item;
+
 pageextension 50105 "Item List" extends "Item List"
 {
     layout

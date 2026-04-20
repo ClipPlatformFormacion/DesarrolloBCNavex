@@ -1,3 +1,7 @@
+namespace ClipPlatform.QualityControl;
+
+using Microsoft.Purchases.History;
+
 reportextension 50100 "Purchase - Receipt" extends "Purchase - Receipt"
 {
     dataset

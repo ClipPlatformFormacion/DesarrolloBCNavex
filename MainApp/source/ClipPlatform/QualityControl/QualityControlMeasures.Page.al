@@ -1,3 +1,7 @@
+namespace ClipPlatform.QualityControl;
+
+using ClipPlatform.Reporting;
+
 page 50100 "Quality Control Measures"
 {
     //Caption = 'Quality Control Measures', Comment = 'ESP="Medidas control calidad"';

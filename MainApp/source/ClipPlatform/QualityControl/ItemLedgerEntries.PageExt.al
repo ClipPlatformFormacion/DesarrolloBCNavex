@@ -1,3 +1,8 @@
+namespace ClipPlatform.QualityControl;
+
+using Microsoft.Inventory.Ledger;
+using Microsoft.Purchases.Vendor;
+
 pageextension 50104 "Item Ledger Entries" extends "Item Ledger Entries"
 {
     layout

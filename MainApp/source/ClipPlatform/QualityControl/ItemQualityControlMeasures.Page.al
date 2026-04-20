@@ -1,3 +1,5 @@
+namespace ClipPlatform.QualityControl;
+
 page 50101 "Item Quality Control Measures"
 {
     Caption = 'Item Quality Control Measures', Comment = 'ESP="Medidas calidad producto"';

@@ -1,3 +1,5 @@
+namespace ClipPlatform.QualityControl;
+
 page 50102 "Purchase QC Measures"
 {
     Caption = 'Purchase Quality Control Measures', Comment = 'ESP="Medidas calidad compra"';

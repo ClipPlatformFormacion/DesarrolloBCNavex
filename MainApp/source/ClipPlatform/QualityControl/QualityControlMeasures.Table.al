@@ -1,3 +1,5 @@
+namespace ClipPlatform.QualityControl;
+
 table 50100 "Quality Control Measures"
 {
     Caption = 'Quality Control Measures Caption', Comment = 'ESP="Medidas control calidad"';

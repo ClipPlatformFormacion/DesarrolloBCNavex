@@ -1,4 +1,9 @@
-tableextension 50102 "Purch. Rcpt. Line" extends "Purch. Rcpt. Line"
+namespace ClipPlatform.QualityControl;
+
+using Microsoft.Inventory.Ledger;
+using Microsoft.Purchases.Vendor;
+
+tableextension 50103 "Item Ledger Entry" extends "Item Ledger Entry"
 {
     fields
     {
@@ -16,6 +21,11 @@ tableextension 50102 "Purch. Rcpt. Line" extends "Purch. Rcpt. Line"
             Caption = 'Quality Control Result (enum)', comment = 'ESP="Resultado control calidad (enum)"';
             ToolTip = 'Specifies the Quality control result', comment = 'ESP="Establece el resultado del control de calidad"';
             DataClassification = CustomerContent;
+        }
+        field(50102; "Vendor Name"; Text[100])
+        {
+            FieldClass = FlowField;
+            CalcFormula = lookup(Vendor.Name where("No." = field("Source No.")));
         }
     }
 }

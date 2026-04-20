@@ -1,3 +1,7 @@
+namespace ClipPlatform.QualityControl;
+
+using Microsoft.Purchases.History;
+
 pageextension 50102 "Posted Purchase Rcpt. Subform" extends "Posted Purchase Rcpt. Subform"
 {
     layout

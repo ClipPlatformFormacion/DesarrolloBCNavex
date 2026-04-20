@@ -1,3 +1,7 @@
+namespace ClipPlatform.QualityControl;
+
+using Microsoft.Purchases.History;
+
 pageextension 50106 "Posted Purchase Receipt" extends "Posted Purchase Receipt"
 {
     layout

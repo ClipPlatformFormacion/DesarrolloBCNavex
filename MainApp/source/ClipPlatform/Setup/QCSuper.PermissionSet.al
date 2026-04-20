@@ -1,5 +1,6 @@
 namespace ClipPlatform.Setup;
 
+using ClipPlatform.QualityControl;
 using ClipPlatform.Sales;
 permissionset 50100 "QCSuper"
 {

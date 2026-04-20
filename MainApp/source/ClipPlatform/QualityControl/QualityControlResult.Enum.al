@@ -1,3 +1,5 @@
+namespace ClipPlatform.QualityControl;
+
 enum 50100 "Quality Control Result"
 {
     Extensible = true;
