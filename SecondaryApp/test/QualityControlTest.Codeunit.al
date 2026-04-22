@@ -146,11 +146,11 @@ codeunit 50151 "Quality Control Test"
         // [Given] Un producto que requiere control de calidad
         // Un pedido de compra con una línea para el producto que requiere control de calidad y no tiene resultado de control de calidad especificado
         ItemNo := LibraryQC.CreateItemWithQC();
-        LibraryPurchase.CreatePurchHeader(PurchHeader, Enum::"Purchase Document Type"::Order, '');
-        LibraryPurchase.CreatePurchaseLine(PurchaseLine, PurchHeader, Enum::"Purchase Line Type"::Item, ItemNo, 1);
+        LibraryPurchase.CreatePurchHeader(PurchaseHeader, Enum::"Purchase Document Type"::Order, '');
+        LibraryPurchase.CreatePurchaseLine(PurchaseLine, PurchaseHeader, Enum::"Purchase Line Type"::Item, ItemNo, 1);
 
         // [When] Intentamos registrar el albarán de compra
-        asserterror LibraryPurchase.PostPurchaseDocument(PurchHeader, true, false);
+        asserterror LibraryPurchase.PostPurchaseDocument(PurchaseHeader, true, false);
 
         // [Then] El sistema da un error y no permite registrar el albarán
         LibraryAssert.AreEqual(StrSubstNo(QCMandatoryEnumErr, ItemNo), GetLastErrorText(), 'El mensaje de error no es correcto');
