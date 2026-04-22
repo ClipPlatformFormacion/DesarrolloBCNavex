@@ -36,6 +36,11 @@
             "id": "AS0015",
             "action": "None",
             "justification": "TranslationFile"
+        },
+        {
+            "id": "AA0247",
+            "action": "None",
+            "justification": "namespaces"
         }
     ]
 }

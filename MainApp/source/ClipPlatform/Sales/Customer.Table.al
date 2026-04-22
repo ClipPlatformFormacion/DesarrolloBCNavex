@@ -1,7 +1,9 @@
 namespace ClipPlatform.Sales;
 using System.Globalization;
 
+#pragma warning disable PTE0025, AS0130
 table 50103 Customer
+#pragma warning restore PTE0025, AS0130
 {
     DataClassification = CustomerContent;
 
