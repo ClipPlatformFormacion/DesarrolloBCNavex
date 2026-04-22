@@ -113,7 +113,7 @@ codeunit 50151 "Quality Control Test"
         LibraryPurchase: Codeunit "Library - Purchase";
         LibraryAssert: Codeunit "Library Assert";
         ItemNo: Code[20];
-        QCMandatoryEnumErr: Label 'Item %1 requieres quality control', Comment = 'ESP="Hay que hacer control de calidad para el producto %1"';
+        QCMandatoryEnumErr: TextConst ENU = 'Item %1 requieres quality control', ESP = 'Hay que hacer control de calidad para el producto %1';
     begin
         // [Scenario] No se permite registrar un albarán de compra si el usuario no ha especificado el resultado del control de calidad
 
