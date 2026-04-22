@@ -7,6 +7,7 @@ pageextension 50105 "Item List" extends "Item List"
             field("Non-Satisfactory Purch. (Qty.)"; Rec."Non-Satisfactory Purch. (Qty.)")
             {
                 ApplicationArea = All;
+                Visible = false;
             }
         }
     }
