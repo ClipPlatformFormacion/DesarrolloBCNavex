@@ -133,13 +133,13 @@ codeunit 50151 "Quality Control Test"
     [Test]
     procedure RegistroDeAlbaranFallaSiNoHayResultadoCC2()
     var
-    // PurchaseHeader: Record "Purchase Header";
-    // PurchaseLine: Record "Purchase Line";
-    // LibraryQC: Codeunit "Library - QC";
-    // LibraryPurchase: Codeunit "Library - Purchase";
-    // LibraryAssert: Codeunit "Library Assert";
-    // ItemNo: Code[20];
-    // QCMandatoryEnumErr: TextConst ENU = 'Item %1 requieres quality control', ESP = 'Hay que hacer control de calidad para el producto %1';
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        LibraryQC: Codeunit "Library - QC";
+        LibraryPurchase: Codeunit "Library - Purchase";
+        LibraryAssert: Codeunit "Library Assert";
+        ItemNo: Code[20];
+        QCMandatoryEnumErr: TextConst ENU = 'Item %1 requieres quality control', ESP = 'Hay que hacer control de calidad para el producto %1';
     begin
         // [Scenario] No se permite registrar un albarán de compra si el usuario no ha especificado el resultado del control de calidad
 
