@@ -133,7 +133,7 @@ codeunit 50151 "Quality Control Test"
     [Test]
     procedure RegistroDeAlbaranFallaSiNoHayResultadoCC2()
     var
-        PurchHeader: Record "Purchase Header";
+        PurchaseHeader: Record "Purchase Header";
         PurchaseLine: Record "Purchase Line";
         LibraryQC: Codeunit "Library - QC";
         LibraryPurchase: Codeunit "Library - Purchase";
