@@ -24,9 +24,9 @@ codeunit 50100 "Purchase Management"
         PurchaseLine.SetLoadFields("No.", "QC Result (Enum)", "QC Result (Option)");
         if PurchaseLine.FindSet() then   // SELECT * FROM PurchaseLine WHERE (setrange setfilter)  // SELECT No.,QC Result, 
             repeat
-                Item.SetLoadFields("Requieres Quality Control");
+                Item.SetLoadFields("Requires Quality Control");
                 Item.Get(PurchaseLine."No.");
-                if Item."Requieres Quality Control" then begin
+                if Item."Requires Quality Control" then begin
                     if PurchaseLine."QC Result (Enum)" = PurchaseLine."QC Result (Enum)"::" " then
                         Error(QCMandatoryEnumErr, PurchaseLine."No.");
                     if PurchaseLine."QC Result (Option)" = PurchaseLine."QC Result (Option)"::" " then

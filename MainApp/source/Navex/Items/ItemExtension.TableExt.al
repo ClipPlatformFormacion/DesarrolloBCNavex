@@ -13,6 +13,24 @@ tableextension 50100 "Item Extension" extends Item
             Caption = 'Requieres Quality Control', Comment = 'ESP="Requiere control calidad"';
             ToolTip = 'sdbsdkjbkj', Comment = 'ESP="Especifica que se deberá realizar un control de calidad de este producto en las compras"';
             DataClassification = CustomerContent;
+            ObsoleteState = Pending;
+            ObsoleteReason = 'Este campo será elimando en BC30. Utilice el campo "Requires Quality Control" en su lugar"';
+
+            trigger OnValidate()
+            begin
+                Rec."Requires Quality Control" := Rec."Requieres Quality Control";
+            end;
+        }
+        field(50103; "Requires Quality Control"; Boolean)
+        {
+            Caption = 'Requires Quality Control', Comment = 'ESP="Requiere control calidad"';
+            ToolTip = 'sdbsdkjbkj', Comment = 'ESP="Especifica que se deberá realizar un control de calidad de este producto en las compras"';
+            DataClassification = CustomerContent;
+
+            trigger OnValidate()
+            begin
+                Rec."Requieres Quality Control" := Rec."Requires Quality Control";
+            end;
         }
         field(50101; "Non-Satisfactory Purch. (Qty.)"; Decimal)
         {

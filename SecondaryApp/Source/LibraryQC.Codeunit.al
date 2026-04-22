@@ -8,7 +8,7 @@ codeunit 50153 "Library - QC"
         Measure1, Measure2 : Code[20];
     begin
         LibraryInventory.CreateItem(Item);
-        Item.Validate("Requieres Quality Control", true);
+        Item.Validate("Requires Quality Control", true);
         Item.Modify(true);
 
         LibraryRandom.Init();
