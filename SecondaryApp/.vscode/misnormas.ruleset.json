@@ -31,6 +31,11 @@
             "id": "AA0218",
             "action": "None",
             "justification": "No quiero poner tooltips"
+        },
+        {
+            "id": "AS0015",
+            "action": "None",
+            "justification": "TranslationFile"
         }
     ]
 }
