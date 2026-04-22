@@ -133,24 +133,24 @@ codeunit 50151 "Quality Control Test"
     [Test]
     procedure RegistroDeAlbaranFallaSiNoHayResultadoCC2()
     var
-    // PurchaseHeader: Record "Purchase Header";
-    // PurchaseLine: Record "Purchase Line";
-    // LibraryQC: Codeunit "Library - QC";
-    // LibraryPurchase: Codeunit "Library - Purchase";
-    // LibraryAssert: Codeunit "Library Assert";
-    // ItemNo: Code[20];
-    // QCMandatoryEnumErr: TextConst ENU = 'Item %1 requieres quality control', ESP = 'Hay que hacer control de calidad para el producto %1';
+        PurchHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        LibraryQC: Codeunit "Library - QC";
+        LibraryPurchase: Codeunit "Library - Purchase";
+        LibraryAssert: Codeunit "Library Assert";
+        ItemNo: Code[20];
+        QCMandatoryEnumErr: TextConst ENU = 'Item %1 requieres quality control', ESP = 'Hay que hacer control de calidad para el producto %1';
     begin
         // [Scenario] No se permite registrar un albarán de compra si el usuario no ha especificado el resultado del control de calidad
 
         // [Given] Un producto que requiere control de calidad
         // Un pedido de compra con una línea para el producto que requiere control de calidad y no tiene resultado de control de calidad especificado
         ItemNo := LibraryQC.CreateItemWithQC();
-        LibraryPurchase.CreatePurchHeader(PurchaseHeader, Enum::"Purchase Document Type"::Order, '');
-        LibraryPurchase.CreatePurchaseLine(PurchaseLine, PurchaseHeader, Enum::"Purchase Line Type"::Item, ItemNo, 1);
+        LibraryPurchase.CreatePurchHeader(PurchHeader, Enum::"Purchase Document Type"::Order, '');
+        LibraryPurchase.CreatePurchaseLine(PurchaseLine, PurchHeader, Enum::"Purchase Line Type"::Item, ItemNo, 1);
 
         // [When] Intentamos registrar el albarán de compra
-        asserterror LibraryPurchase.PostPurchaseDocument(PurchaseHeader, true, false);
+        asserterror LibraryPurchase.PostPurchaseDocument(PurchHeader, true, false);
 
         // [Then] El sistema da un error y no permite registrar el albarán
         LibraryAssert.AreEqual(StrSubstNo(QCMandatoryEnumErr, ItemNo), GetLastErrorText(), 'El mensaje de error no es correcto');
