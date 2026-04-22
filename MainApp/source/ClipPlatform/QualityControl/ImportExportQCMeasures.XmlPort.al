@@ -35,6 +35,6 @@ xmlport 50100 "Import/Export QC Measures"
 
     local procedure ChangeDescription()
     begin
-        QualityControlMeasures.Description := 'IMPORTADO: ' + QualityControlMeasures.Description;
+        QualityControlMeasures.Description := CopyStr('IMPORTADO: ' + QualityControlMeasures.Description, 1, MaxStrLen(QualityControlMeasures.Description));
     end;
 }
