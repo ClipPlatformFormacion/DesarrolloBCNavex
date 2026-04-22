@@ -13,7 +13,7 @@ query 50100 "Item Vendor"
             // DataItemTableFilter = "Replenishment System" = const(Purchase);
             column(No_; "No.") { }
             column(Description; Description) { }
-            column(Requieres_Quality_Control; "Requieres Quality Control") { }
+            column(Requieres_Quality_Control; "Requires Quality Control") { }
             column(Replenishment_System; "Replenishment System")
             {
                 ColumnFilter = Replenishment_System = const(Purchase);

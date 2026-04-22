@@ -11,7 +11,7 @@ pageextension 50100 "Item Card Extension" extends "Item Card"
             group(QualityControl)
             {
                 Caption = 'Quality Control', Comment = 'ESP="Control calidad"';
-                field("Requieres Quality Control"; Rec."Requieres Quality Control")
+                field("Requieres Quality Control"; Rec."Requires Quality Control")
                 {
                     ApplicationArea = All;
                 }
